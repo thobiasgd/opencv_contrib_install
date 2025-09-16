@@ -42,9 +42,10 @@ cd C:\opencv_build
 
 cmake -G "Visual Studio 17 2022" -A x64 ..\opencv ^
   -DOPENCV_EXTRA_MODULES_PATH=..\opencv_contrib\modules ^
-  -DCMAKE_INSTALL_PREFIX=..\opencv_install ^
+  -DCMAKE_INSTALL_PREFIX=C:\opencv_install ^
   -DBUILD_TESTS=OFF ^
-  -DBUILD_PERF_TESTS=OFF
+  -DBUILD_PERF_TESTS=OFF ^
+  -DBUILD_SHARED_LIBS=ON
 ```
 
 ---
@@ -60,9 +61,9 @@ Estrutura final em `C:\opencv_install`:
 
 ```
 include\opencv2\...
-x64\vc16\lib\
-x64\vc16\bin\
-x64\vc16\lib\cmake\opencv4\OpenCVConfig.cmake
+x64\vc17\lib\
+x64\vc17\bin\
+x64\vc17\lib\cmake\opencv4\OpenCVConfig.cmake
 ```
 
 ---
@@ -71,12 +72,12 @@ x64\vc16\lib\cmake\opencv4\OpenCVConfig.cmake
 
 **Path**:
 ```
-C:\opencv_install\x64\vc16\bin
+C:\opencv_install\x64\vc17\bin
 ```
 
 **OPENCV_DIR**:
 ```
-C:\opencv_install\x64\vc16\lib\cmake\opencv4
+C:\opencv_install\x64\vc17\lib\cmake\opencv4
 ```
 
 ---
